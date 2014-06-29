@@ -1,0 +1,14 @@
+.btn {
+  text-transform: uppercase;
+  border: none;
+  @include border-radius(0);
+  &.btn-primary {
+    background: #000;
+  }
+  &.btn-shop-look {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 20px;
+  }
+}

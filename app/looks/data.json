@@ -1,0 +1,74 @@
+[
+    {
+        "title": "ALL OVER DENIM",
+        "sub_title": "Probably our favorite items",
+        "looks": [
+            {
+                "image_high": "assets/looks/look1_high.jpg",
+                "image_low": "assets/looks/look1_low.jpg",
+                "publisher": {
+                    "title": "Billie Rose",
+                    "sub_title": "Fashion & lifestyle blogger",
+                    "image_high": "assets/publishers/publisher1.jpg",
+                    "image_low": "assets/publishers/publisher1.jpg"
+                }
+            },
+            {
+                "image_high": "assets/looks/look2_high.jpg",
+                "image_low": "assets/looks/look2_low.jpg",
+                "publisher": {
+                    "title": "Anouska",
+                    "sub_title": "Fashion blogger from Ireland",
+                    "image_high": "assets/publishers/publisher2.jpg",
+                    "image_low": "assets/publishers/publisher2.jpg"
+                }
+            },
+            {
+                "image_high": "assets/looks/look3_high.jpg",
+                "image_low": "assets/looks/look3_low.jpg",
+                "publisher": {
+                    "title": "Vogue Haus",
+                    "sub_title": "Fashion blogger",
+                    "image_high": "assets/publishers/publisher3.jpg",
+                    "image_low": "assets/publishers/publisher3.jpg"
+                }
+            }
+        ]
+    },
+    {
+        "title": "SUMMERTIME SUNNIES",
+        "sub_title": "Lovely shades you want right now!",
+        "looks": [
+            {
+                "image_high": "assets/looks/look4_high.jpg",
+                "image_low": "assets/looks/look4_low.jpg",
+                "publisher": {
+                    "title": "Damsel in Dior",
+                    "sub_title": "Fashion blogger",
+                    "image_high": "assets/publishers/publisher4.jpg",
+                    "image_low": "assets/publishers/publisher4.jpg"
+                }
+            },
+            {
+                "image_high": "assets/looks/look5_high.jpg",
+                "image_low": "assets/looks/look5_low.jpg",
+                "publisher": {
+                    "title": "Negin Mirsalehi",
+                    "sub_title": "Fashion blogger",
+                    "image_high": "assets/publishers/publisher5.jpg",
+                    "image_low": "assets/publishers/publisher5.jpg"
+                }
+            },
+            {
+                "image_high": "assets/looks/look6_high.jpg",
+                "image_low": "assets/looks/look6_low.jpg",
+                "publisher": {
+                    "title": "Emilie Sobels",
+                    "sub_title": "Fashion Director at Fashiolista.com",
+                    "image_high": "assets/publishers/publisher6.jpg",
+                    "image_low": "assets/publishers/publisher6.jpg"
+                }
+            }
+        ]
+    }
+]

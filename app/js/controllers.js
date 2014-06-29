@@ -2,10 +2,12 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
+var fashiolistaControllers = angular.module('fashiolistaControllers', []);
 
-  }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
-
-  }]);
+fashiolistaControllers.controller('LookListCtrl', ['$scope', '$http',
+  function($scope, $http) {
+    $http.get('looks/data.json').success(function(data) {
+      $scope.trends = data;
+    });
+  }
+]);
