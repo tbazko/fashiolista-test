@@ -1,0 +1,28 @@
+<div class="container" ng-controller="CarouselCtrl">
+  <div class="row">
+    <div class="col-xs-12 text-center pt10 pb15">
+      <h4>Trend</h4>
+      <h2>{{currentTrendTitle}}</h2>
+      <h3>{{currentSubTitle}}</h3>
+    </div>
+  </div>
+  <div class="row">
+  <ul id="carousel" rn-carousel class="col-xs-12 text-center">
+    <li ng-repeat="look in looks" ng-swipe-left="setTitleNext($index)" ng-swipe-right="setTitlePrev($index)">
+      <div class="shop-look-container">
+        <div class="shop-look">
+          <img ng-src="{{res == 'xs' && look.image_low || look.image_high}}" alt="">
+        </div>
+        <a href="" class="btn btn-primary btn-shop-look">Shop look</a>
+        <div class="text-left pt20">
+          <div class="publisher-avatar left" ng-style="{'background-image':'url({{look.publisher.image_low}})'}"></div>
+          <div class="publisher-info">
+            <p class="look-by">Look by: </p>
+            <h2>{{look.publisher.title}}</h2>
+            <h3 class="stick-to-btm">{{look.publisher.sub_title}}</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

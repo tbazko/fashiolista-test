@@ -6,5 +6,7 @@ var fashiolistaTestApp = angular.module('fashiolistaTestApp', [
   'ngRoute',
   'fashiolistaServices',
   'fashiolistaControllers',
-  'fashiolistaDirectives'
+  'fashiolistaDirectives',
+  'ngTouch',
+  'angular-carousel'
 ]);

@@ -4,11 +4,17 @@
   @include border-radius(0);
   &.btn-primary {
     background: #000;
+    padding: 11px 0;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
   }
   &.btn-shop-look {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 20px;
+    display: block;
+    margin: -50px 10px 0;
+    position: relative;
+    z-index: 2;
+    @include breakpoint(small) {
+    }
   }
 }

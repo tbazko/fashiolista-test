@@ -12,9 +12,24 @@ h1 {
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 3px;
+  padding: 15px 0;
+  position: relative;
   text-transform: uppercase;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include box-shadow(0 5px 2px -4px #eee);
+  span {
+    @extend %inline-block;
+    height: 17px;
+    width: 17px;
+    vertical-align: top;
+    background: url('../assets/icon.png') no-repeat right;
+    background-size: contain;
+    @include breakpoint(xs) {
+      position: absolute;
+      right: 0px;
+    }
+  }
 }
 
 h2 {
@@ -29,6 +44,7 @@ h3 {
   font-family: 'Cardo', serif;
   font-size: 13px;
   font-style: italic;
+  line-height: 18px;
 }
 
 h4 {
@@ -37,6 +53,7 @@ h4 {
   font-family: 'Raleway', sans-serif;
   font-size: 9px;
   text-transform: uppercase;
+  margin: 0 0 15px;
 }
 
 a {

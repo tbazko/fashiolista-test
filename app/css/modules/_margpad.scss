@@ -28,6 +28,9 @@ $margin: ('margin', 'm');
 }
 
 @include makePadding(0, 51);
+@include breakpoint(medium) {
+  @include makePadding (0, 21, 'md-')
+}
 
 
 

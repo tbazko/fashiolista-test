@@ -1,0 +1,34 @@
+<div ng-controller="LookListCtrl">
+  <div class="container pb50" ng-repeat="trend in trends">
+    <div class="row">
+      <div class="col-xs-12 text-center pt10 pb15">
+        <h4>Trend</h4>
+        <h2>{{trend.title}}</h2>
+        <h3>{{trend.sub_title}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 col-md-4 look md-pl5 md-pr5" ng-repeat="look in trend.looks">
+        <div class="shop-look-container">
+          <div class="shop-look">
+            <img ng-src="{{res == 'big' && look.image_high || look.image_low}}" alt="">
+          </div>
+          <a href="" class="btn btn-primary btn-shop-look">Shop look</a>
+        </div>
+
+        <div class="clear"></div>
+        <div class="row pt30 md-pt20 publisher">
+          <div class="col-sm-4 col-md-3 pr0">
+            <div class="publisher-avatar" ng-style="{'background-image':'url({{res == 'big' && look.publisher.image_high || look.publisher.image_low}})'}"></div>
+          </div>
+          <div class="col-sm-8 col-md-9 pl10">
+            <p class="look-by">Look by: </p>
+            <h2 class="mb5">{{look.publisher.title}}</h2>
+            <h3>{{look.publisher.sub_title}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
