@@ -8,6 +8,11 @@
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 2px;
+    @include transitions();
+    &:hover {
+      background: #333;
+      @include transitions();
+    }
   }
   &.btn-shop-look {
     display: block;
