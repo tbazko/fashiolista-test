@@ -1,4 +1,4 @@
-<div class="container" ng-controller="CarouselCtrl">
+<div class="container" ng-controller="MobileCarouselCtrl">
   <div class="row">
     <div class="col-xs-12 text-center pt10 pb15">
       <h4>Trend</h4>
@@ -8,7 +8,7 @@
   </div>
   <div class="row">
   <ul id="carousel" rn-carousel class="col-xs-12 text-center">
-    <li ng-repeat="look in looks" ng-swipe-left="setTitleNext($index)" ng-swipe-right="setTitlePrev($index)">
+    <li ng-repeat="look in looks" index-change index-changed>
       <div class="shop-look-container">
         <div class="shop-look">
           <img ng-src="{{res == 'xs' && look.image_low || look.image_high}}" alt="">

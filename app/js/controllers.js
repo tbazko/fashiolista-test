@@ -4,7 +4,7 @@
 
 var fashiolistaControllers = angular.module('fashiolistaControllers', []);
 
-fashiolistaControllers.controller('LookListCtrl', ['$scope', '$http',
+fashiolistaControllers.controller('DesktopListCtrl', ['$scope', '$http',
   function($scope, $http) {
     $http.get('looks/data.json').success(function(data) {
       $scope.trends = data;
@@ -12,9 +12,8 @@ fashiolistaControllers.controller('LookListCtrl', ['$scope', '$http',
   }
 ]);
 
-fashiolistaControllers.controller('CarouselCtrl', ['$scope', '$http',
+fashiolistaControllers.controller('MobileCarouselCtrl', ['$scope', '$http',
   function ($scope, $http) {
-
 
     $http.get('looks/data.json').success(function(data) {
       $scope.trends = data;
@@ -27,27 +26,10 @@ fashiolistaControllers.controller('CarouselCtrl', ['$scope', '$http',
         }
       };
 
-
       $scope.currentTrendTitle = $scope.trends[0].title;
       $scope.currentSubTitle = $scope.trends[0].sub_title;
 
-      $scope.setTitleNext = function(index) {
-        var length = $scope.looks.length;
-        if (index < length - 1) {
-          index = index + 1;
-        }
-        var id = $scope.looks[index].id;
-        $scope.currentTrendTitle = $scope.trends[id].title;
-        $scope.currentSubTitle = $scope.trends[id].sub_title;
-
-      }
-
-      $scope.setTitlePrev = function(index) {
-        if(index > 0) {
-          index = index - 1;
-        }
-        else index = index;
-
+      $scope.setTitle = function(index) {
         var id = $scope.looks[index].id;
         $scope.currentTrendTitle = $scope.trends[id].title;
         $scope.currentSubTitle = $scope.trends[id].sub_title;

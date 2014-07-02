@@ -46,3 +46,27 @@ fashiolistaDirectives.directive('elresize', ['$window', function($window) {
     template: "<div ng-include='onResize()'></div>"
   }
 }]);
+
+fashiolistaDirectives.directive('indexChange', function($timeout) {
+  return {
+    restrict: "A",
+    link: function(scope, element, attrs) {
+      scope.$watch('carouselIndex', function(newValue, oldValue) {
+        scope.index = newValue;
+        var event = new Event('slide');
+        scope.$broadcast('slide');
+        $timeout(function() {
+          scope.$apply();
+        }, 0, false);
+      });
+    }
+  }
+}).directive('indexChanged', function() {
+  return {
+    link: function(scope, element, attrs) {
+      scope.$on('slide', function() {
+        scope.setTitle(scope.index);
+      });
+    }
+  }
+});
